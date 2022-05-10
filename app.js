@@ -4,7 +4,6 @@ const maxResult = '&maxResults=' + 5
 let search = 'koala'  // 검색어
 
 function getData() {
-
   // 요청
   const url = 
     `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}${OPTION}${maxResult}&q=${search}`
@@ -18,6 +17,7 @@ function getData() {
   .catch(function (err) {
     // 에러 핸들링
     console.log(err);
+    $('#main .row').append('<p>지금 검색을 할 수 업습니다.</p>')
   })
 }
 
@@ -49,13 +49,11 @@ function appendVideo(items) {
 
 getData()
 
-$('#btn').on('click', function(){
-  // search = $('#search').val()
-  // console.log(search)
+$('#search-form').on('submit', function(e){
+  e.preventDefault()
+  search = $('#search').val()
+  console.log(search)
   getData()
 })
 
-// $('#search').on('input', function(e){
-//   console.log($(this).val())
-// })
 

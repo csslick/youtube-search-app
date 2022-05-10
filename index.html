@@ -11,11 +11,19 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-  <header>
+  <header class="mt-3">
     <div class="container">
-      <h1>MeTube</h1>
-      <input type="search" id="search">
-      <button id="btn">search</button>
+      <div class="row align-items-center">
+        <h1 class="col-auto">MeTube</h1>
+        <form id="search-form" class="col-auto ms-auto row">
+          <div class="col-auto">
+            <input type="search" id="search" class="form-control">
+          </div>
+          <div class="col-auto p-0">
+            <button class="btn btn-primary">search</button>
+          </div>
+        </form>
+      </div><!-- row -->
     </div>
   </header>
 
