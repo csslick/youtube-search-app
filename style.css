@@ -1,0 +1,12 @@
+#main .row img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+#main h4 {
+  font-size: 18px;
+}
+
+#main p {
+  font-size: 14px;
+}
