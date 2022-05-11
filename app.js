@@ -1,7 +1,7 @@
 const API_KEY = 'AIzaSyB0enktXDl_YiF5Ap2zYgUkWef57ch55gs'
 const OPTION = '&type=video&part=snippet'
-const maxResult = '&maxResults=' + 5
-let search = 'koala'  // 검색어
+const maxResult = '&maxResults=' + 12
+let search = 'movie'  // 검색어
 
 function getData() {
   // 요청
@@ -33,7 +33,7 @@ function appendVideo(items) {
     let html = `
       <div class="col-md-3">
         <div class="item mb-4">
-          <a href='#'>
+          <a href='detail.html?id=${item.id.videoId}'>
             <img style="width:100%" class="" src=${thumbnails} alt=${channelTitle}/>
           </a>  
           <h4 class='title'>${channelTitle}</h4>
